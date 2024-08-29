@@ -3,205 +3,189 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donaciones y Contribuciones</title>
-    
-   
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    
+    <title>DDS - Grupo 02</title>
+    <!-- Import bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <!-- Import popper.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    <!-- Import javascript cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <!-- Import Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS stylesheet -->
     <link rel="stylesheet" href="./styles/sidebar.css">
     <link rel="stylesheet" href="./styles/badges.css">
-
-    <!-- CSS de de Mr Frames-->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-        }
-
-        .sidebar {
-            width: 180px;
-            height: 100vh;
-            background-color: #343a40;
-            color: white;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px;
-        }
-
-        .sidebar .nav-link {
-            color: white;
-        }
-
-        .main-content {
-            margin-left: 180px;
-            padding: 20px;
-        }
-
-        .table-container {
-            max-width: 1200px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .table thead th {
-            background-color: #343a40;
-            color: white;
-        }
-
-        .table td, .table th {
-            text-align: center;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .navbar {
-            background-color: #343a40;
-        }
-    </style>
 </head>
 
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
+
+<main>
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 210px;">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none mx-auto">
-            <span class="fs-4">Sidebar</span>
+            <span class="fs-4">Grupo 02</span>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="#" class="nav-link active" aria-current="page">Home</a>
+                <a href="./index.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-house me-2"></i>
+                    Inicio
+                </a>
             </li>
-            <li>
-                <a href="#" class="nav-link text-white">Dashboard</a>
+            <li class="nav-item">
+                <a href="./premios.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-trophy me-2"></i>
+                    Premios
+                </a>
             </li>
-            <li>
-                <a href="#" class="nav-link text-white">Orders</a>
+            <li class="nav-item">
+                <a href="./cargarPremio.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-plus me-2"></i>
+                    Cargar Premio
+                </a>
             </li>
-            <li>
-                <a href="#" class="nav-link text-white">Products</a>
+            <li class="nav-item">
+                <a href="./importarColaboradores.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-file-import me-2"></i>
+                    Importar
+                </a>
             </li>
-            <li>
-                <a href="#" class="nav-link text-white">Customers</a>
+            <li class="nav-item">
+                <a href="./contribucciones.html" class="nav-link active" aria-current="page">
+                    <i class="fa-solid fa-hand-holding-medical me-2"></i>
+                    Contribuciones
+                </a>
             </li>
         </ul>
     </div>
 
-    
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center me-auto">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Home</a>
-                        </li>
-                    </ul>
+    <div class="b-divider"></div>
+
+    <div class="w-100 mx-0" style="background-color: #f4f4f4">
+        <div class="w-100 p-0 m-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center me-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="nav-link badge badge-secondary p-2 mx-1">Puntos: 80.000</span>
+                        <a class="nav-link align-items-center mx-1" href="#"
+                           id="navbarDropdownMenuLink" aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+                                 height="32" alt="Avatar" loading="lazy"/>
+                        </a>
+                    </div>
+
                 </div>
-                <div class="d-flex align-items-center">
-                    <span class="nav-link badge badge-secondary p-2 mx-1">Puntos: 80.000</span>
-                    <a class="nav-link align-items-center mx-1" href="#" id="navbarDropdownMenuLink" aria-expanded="false">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle" height="32" alt="Avatar" loading="lazy"/>
-                    </a>
+            </nav>
+        </div>
+        <div class="container-fluid pt-1 py-1 h-100 pb-5" style="overflow: auto;">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Test</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Publicar premio</h1>
+                </div>
+                <div class="col-12">
+                    <div class="table-container">
+                        <h1 class="text-center mb-4">Donaciones y Contribuciones</h1>
+
+
+                        <div class="mb-4">
+                            <label for="action-type" class="form-label">Selecciona el Tipo de Acción</label>
+                            <select id="action-type" class="form-select" onchange="updateTable()">
+                                <option value="">Seleccionar...</option>
+                                <option value="donation">Donación</option>
+                                <option value="contribution">Contribución</option>
+                            </select>
+                        </div>
+
+                        <!-- Tabla magica -->
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                            <tr id="table-header">
+                                <th>Campo</th>
+                                <th>Detalles</th>
+                            </tr>
+                            </thead>
+                            <tbody id="table-body">
+                            <!-- Filas para Donaciones -->
+                            <tr class="donation hidden">
+                                <td>Tipo de Donación</td>
+                                <td>
+                                    <select class="form-select" id="donation-type" onchange="updateDonationFields()">
+                                        <option value="money">Monetaria</option>
+                                        <option value="goods">Viandas</option>
+                                        <option value="prize">Premio</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="donation hidden" id="donation-amount-row">
+                                <td>Monto de Donación</td>
+                                <td><input type="text" class="form-control" id="donation-amount" placeholder="Monto"></td>
+                            </tr>
+                            <tr class="donation hidden" id="donation-location-row">
+                                <td>Heladera</td>
+                                <td><input type="text" class="form-control" id="donation-location" placeholder="Heladera"></td>
+                            </tr>
+                            <tr class="donation hidden" id="donation-prize-row">
+                                <td>Descripción del Premio</td>
+                                <td><input type="text" class="form-control" id="donation-prize" placeholder="Premio"></td>
+                            </tr>
+
+                            <!-- Filas para Contribuciones -->
+                            <tr class="contribution hidden">
+                                <td>Tipo de Contribución</td>
+                                <td>
+                                    <select class="form-select" id="contribution-type" onchange="updateContributionFields()">
+                                        <option value="manage">Administrar Heladera</option>
+                                        <option value="distribute">Distribución de Viandas</option>
+                                        <option value="register">Registrar Persona Vulnerable</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="contribution hidden" id="manage-fridge-row">
+                                <td>Heladera a Administrar</td>
+                                <td><input type="text" class="form-control" id="manage-fridge" placeholder="Heladera"></td>
+                            </tr>
+                            <tr class="contribution hidden" id="distribute-fridges-row">
+                                <td>
+                                    <input type="text" class="form-control mb-2" id="distribute-origin"
+                                           placeholder="Heladera Origen">
+                                    <input type="text" class="form-control mb-2" id="distribute-destination"
+                                           placeholder="Heladera Destino">
+                                    <input type="text" class="form-control mb-2" id="distribute-quantity" placeholder="Cantidad">
+                                </td>
+                                <td>
+                                    <select class="form-select" id="distribute-reason">
+                                        <option value="breakdown">Desperfecto</option>
+                                        <option value="fault">Falla de Viandas</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="contribution hidden" id="register-person-row">
+                                <td>Número de Tarjeta</td>
+                                <td><input type="text" class="form-control" id="register-card" placeholder="Número de Tarjeta"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-        
-        <div class="table-container">
-            <h1 class="text-center mb-4">Donaciones y Contribuciones</h1>
-            
-            
-            <div class="mb-4">
-                <label for="action-type" class="form-label">Selecciona el Tipo de Acción</label>
-                <select id="action-type" class="form-select" onchange="updateTable()">
-                    <option value="">Seleccionar...</option>
-                    <option value="donation">Donación</option>
-                    <option value="contribution">Contribución</option>
-                </select>
-            </div>
-
-            <!-- Tabla magica -->
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr id="table-header">
-                        <th>Campo</th>
-                        <th>Detalles</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-                    <!-- Filas para Donaciones -->
-                    <tr class="donation hidden">
-                        <td>Tipo de Donación</td>
-                        <td>
-                            <select class="form-select" id="donation-type" onchange="updateDonationFields()">
-                                <option value="money">Monetaria</option>
-                                <option value="goods">Viandas</option>
-                                <option value="prize">Premio</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr class="donation hidden" id="donation-amount-row">
-                        <td>Monto de Donación</td>
-                        <td><input type="text" class="form-control" id="donation-amount" placeholder="Monto"></td>
-                    </tr>
-                    <tr class="donation hidden" id="donation-location-row">
-                        <td>Heladera</td>
-                        <td><input type="text" class="form-control" id="donation-location" placeholder="Heladera"></td>
-                    </tr>
-                    <tr class="donation hidden" id="donation-prize-row">
-                        <td>Descripción del Premio</td>
-                        <td><input type="text" class="form-control" id="donation-prize" placeholder="Premio"></td>
-                    </tr>
-                    
-                    <!-- Filas para Contribuciones -->
-                    <tr class="contribution hidden">
-                        <td>Tipo de Contribución</td>
-                        <td>
-                            <select class="form-select" id="contribution-type" onchange="updateContributionFields()">
-                                <option value="manage">Administrar Heladera</option>
-                                <option value="distribute">Distribución de Viandas</option>
-                                <option value="register">Registrar Persona Vulnerable</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr class="contribution hidden" id="manage-fridge-row">
-                        <td>Heladera a Administrar</td>
-                        <td><input type="text" class="form-control" id="manage-fridge" placeholder="Heladera"></td>
-                    </tr>
-                    <tr class="contribution hidden" id="distribute-fridges-row">
-                        <td>
-                            <input type="text" class="form-control mb-2" id="distribute-origin" placeholder="Heladera Origen">
-                            <input type="text" class="form-control mb-2" id="distribute-destination" placeholder="Heladera Destino">
-                            <input type="text" class="form-control mb-2" id="distribute-quantity" placeholder="Cantidad">
-                        </td>
-                        <td>
-                            <select class="form-select" id="distribute-reason">
-                                <option value="breakdown">Desperfecto</option>
-                                <option value="fault">Falla de Viandas</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr class="contribution hidden" id="register-person-row">
-                        <td>Número de Tarjeta</td>
-                        <td><input type="text" class="form-control" id="register-card" placeholder="Número de Tarjeta"></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 
@@ -240,6 +224,8 @@
             document.getElementById('register-person-row').classList.toggle('hidden', contributionType !== 'register');
         }
     </script>
+</main>
+
 </body>
 
 </html>
