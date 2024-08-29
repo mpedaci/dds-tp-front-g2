@@ -124,7 +124,7 @@
                             </thead>
                             <tbody id="table-body">
                             <!-- Filas para Donaciones -->
-                            <tr class="donation hidden">
+                            <tr class="donation d-none">
                                 <td>Tipo de Donación</td>
                                 <td>
                                     <select class="form-select" id="donation-type" onchange="updateDonationFields()">
@@ -134,21 +134,21 @@
                                     </select>
                                 </td>
                             </tr>
-                            <tr class="donation hidden" id="donation-amount-row">
+                            <tr class="donation d-none" id="donation-amount-row">
                                 <td>Monto de Donación</td>
                                 <td><input type="text" class="form-control" id="donation-amount" placeholder="Monto"></td>
                             </tr>
-                            <tr class="donation hidden" id="donation-location-row">
+                            <tr class="donation d-none" id="donation-location-row">
                                 <td>Heladera</td>
                                 <td><input type="text" class="form-control" id="donation-location" placeholder="Heladera"></td>
                             </tr>
-                            <tr class="donation hidden" id="donation-prize-row">
+                            <tr class="donation d-none" id="donation-prize-row">
                                 <td>Descripción del Premio</td>
                                 <td><input type="text" class="form-control" id="donation-prize" placeholder="Premio"></td>
                             </tr>
 
                             <!-- Filas para Contribuciones -->
-                            <tr class="contribution hidden">
+                            <tr class="contribution d-none">
                                 <td>Tipo de Contribución</td>
                                 <td>
                                     <select class="form-select" id="contribution-type" onchange="updateContributionFields()">
@@ -158,11 +158,11 @@
                                     </select>
                                 </td>
                             </tr>
-                            <tr class="contribution hidden" id="manage-fridge-row">
+                            <tr class="contribution d-none" id="manage-fridge-row">
                                 <td>Heladera a Administrar</td>
                                 <td><input type="text" class="form-control" id="manage-fridge" placeholder="Heladera"></td>
                             </tr>
-                            <tr class="contribution hidden" id="distribute-fridges-row">
+                            <tr class="contribution d-none" id="distribute-fridges-row">
                                 <td>
                                     <input type="text" class="form-control mb-2" id="distribute-origin"
                                            placeholder="Heladera Origen">
@@ -177,7 +177,7 @@
                                     </select>
                                 </td>
                             </tr>
-                            <tr class="contribution hidden" id="register-person-row">
+                            <tr class="contribution d-none" id="register-person-row">
                                 <td>Número de Tarjeta</td>
                                 <td><input type="text" class="form-control" id="register-card" placeholder="Número de Tarjeta"></td>
                             </tr>
@@ -197,31 +197,31 @@
             const contributionRows = document.querySelectorAll('.contribution');
 
             if (actionType === 'donation') {
-                donationRows.forEach(row => row.classList.remove('hidden'));
-                contributionRows.forEach(row => row.classList.add('hidden'));
+                donationRows.forEach(row => row.classList.remove('d-none'));
+                contributionRows.forEach(row => row.classList.add('d-none'));
                 updateDonationFields(); // Actualizar campos de donación según tipo
             } else if (actionType === 'contribution') {
-                donationRows.forEach(row => row.classList.add('hidden'));
-                contributionRows.forEach(row => row.classList.remove('hidden'));
+                donationRows.forEach(row => row.classList.add('d-none'));
+                contributionRows.forEach(row => row.classList.remove('d-none'));
                 updateContributionFields(); // Actualizar campos de contribución según tipo
             } else {
-                donationRows.forEach(row => row.classList.add('hidden'));
-                contributionRows.forEach(row => row.classList.add('hidden'));
+                donationRows.forEach(row => row.classList.add('d-none'));
+                contributionRows.forEach(row => row.classList.add('d-none'));
             }
         }
 
         function updateDonationFields() {
             const donationType = document.getElementById('donation-type').value;
-            document.getElementById('donation-amount-row').classList.toggle('hidden', donationType !== 'money');
-            document.getElementById('donation-location-row').classList.toggle('hidden', donationType !== 'goods');
-            document.getElementById('donation-prize-row').classList.toggle('hidden', donationType !== 'prize');
+            document.getElementById('donation-amount-row').classList.toggle('d-none', donationType !== 'money');
+            document.getElementById('donation-location-row').classList.toggle('d-none', donationType !== 'goods');
+            document.getElementById('donation-prize-row').classList.toggle('d-none', donationType !== 'prize');
         }
 
         function updateContributionFields() {
             const contributionType = document.getElementById('contribution-type').value;
-            document.getElementById('manage-fridge-row').classList.toggle('hidden', contributionType !== 'manage');
-            document.getElementById('distribute-fridges-row').classList.toggle('hidden', contributionType !== 'distribute');
-            document.getElementById('register-person-row').classList.toggle('hidden', contributionType !== 'register');
+            document.getElementById('manage-fridge-row').classList.toggle('d-none', contributionType !== 'manage');
+            document.getElementById('distribute-fridges-row').classList.toggle('d-none', contributionType !== 'distribute');
+            document.getElementById('register-person-row').classList.toggle('d-none', contributionType !== 'register');
         }
     </script>
 </main>
