@@ -33,42 +33,60 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="./index.html" class="nav-link active" aria-current="page">
-                    <i class="fa-solid fa-house me-2" ></i>
+                <a href="./index.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-house me-2"></i>
                     Inicio
                 </a>
             </li>
-        </li>
-        <li class="nav-item">
-            <a href="./premios.html" class="nav-link text-white" aria-current="page">
-                <i class="fa-solid fa-trophy me-2"></i>
-                Premios
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="./cargarPremio.html" class="nav-link text-white" aria-current="page">
-                <i class="fa-solid fa-plus me-2"></i>
-                Cargar Premio
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="./importarColaboradores.html" class="nav-link active" aria-current="page">
-                <i class="fa-solid fa-file-import me-2"></i>
-                Importar
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="./contribucciones.html" class="nav-link text-white" aria-current="page">
-                <i class="fa-solid fa-hand-holding-medical me-2"></i>
-                Contribuciones
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="./reportarFallaTecnica.html" class="nav-link text-white" aria-current="page">
-                <i class="fa-solid fa-triangle-exclamation me-2"></i>
-                Reportar Falla Técnica
-            </a>
-        </li>
+            </li>
+            <li class="nav-item">
+                <a href="./premios.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-trophy me-2"></i>
+                    Premios
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./cargarPremio.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-plus me-2"></i>
+                    Cargar Premio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./importarColaboradores.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-file-import me-2"></i>
+                    Importar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./contribucciones.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-hand-holding-medical me-2"></i>
+                    Contribuciones
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./registrarColaborador.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-user-plus me-2"></i>
+                    Registro Colaborador
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./registroPersonaVulnerable.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-people-robbery me-2"></i>
+                    Registro Persona Vulnerable
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./reportarFallaTecnica.html" class="nav-link active" aria-current="page">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                    Reportar Falla Técnica
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./reportes.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-file-lines me-2"></i>
+                    Reportes
+                </a>
+            </li>
         </ul>
     </div>
 
@@ -100,43 +118,52 @@
         <div class="container-fluid pt-1 py-1 h-100 pb-5" style="overflow: auto;">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Reportar Falla Técnica</li>
                 </ol>
             </nav>
 
-        <form>
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-center">Reportar Falla Técnica</h1>
-                </div>
-                        
+                    <form>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-center">Reportar Falla Técnica</h1>
+                            </div>
+
                             <div class="mb-3">
-                                <label class="form-label"><i class="fa-regular fa-snowflake me-2"></i>Nombre Heladera</label>
-                                <input type="text" class="form-control" placeholder="Ingrese el nombre de la heladera">
+                                <label class="form-label"><i class="fa-regular fa-snowflake me-2"></i>Heladera</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione una heladera</option>
+                                    <option value="1">Heladera 1</option>
+                                    <option value="2">Heladera 2</option>
+                                    <option value="3">Heladera 3</option>
+                                </select>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label"><i class="fas fa-map-marker-alt me-2"></i>Dirección Heladera</label>
-                                <input type="text" class="form-control" placeholder="Ingrese la dirección de la heladera">
+                                <label class="form-label" for="descripcion"><i class="fa-regular fa-file me-2"></i>Descripción
+                                    (Opcional)</label>
+                                <textarea class="form-control" rows="3"
+                                          placeholder="Ingrese un detalle de la falla" id="descripcion"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label"><i class="fa-regular fa-file me-2"></i>Descripción (Opcional)</label>
-                                <textarea class="form-control" rows="3" placeholder="Ingrese un detalle de la falla"></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label"><i class="fas fa-paperclip me-2"></i>Adjuntar archivo (jpg, png)</label>
-                                <input type="file" class="form-control" accept="image/png, image/jpeg">
+                                <label class="form-label" for="foto"><i class="fas fa-paperclip me-2"></i>Adjuntar foto (jpg,
+                                    png)</label>
+                                <input type="file" class="form-control" accept="image/png, image/jpeg" id="foto">
                             </div>
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn btn-primary bpx-5">Reportar Falla</button>
                             </div>
-                    
-                    </div>
+
+                        </div>
+                    </form>
                 </div>
             </div>
-
-        </form>
         </div>
+    </div>
+
+    </form>
+    </div>
     </div>
 </main>
 

@@ -38,6 +38,7 @@
                     Inicio
                 </a>
             </li>
+            </li>
             <li class="nav-item">
                 <a href="./premios.html" class="nav-link text-white" aria-current="page">
                     <i class="fa-solid fa-trophy me-2"></i>
@@ -60,6 +61,30 @@
                 <a href="./contribucciones.html" class="nav-link active" aria-current="page">
                     <i class="fa-solid fa-hand-holding-medical me-2"></i>
                     Contribuciones
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./registrarColaborador.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-user-plus me-2"></i>
+                    Registro Colaborador
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./registroPersonaVulnerable.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-people-robbery me-2"></i>
+                    Registro Persona Vulnerable
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./reportarFallaTecnica.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                    Reportar Falla Técnica
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./reportes.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-file-lines me-2"></i>
+                    Reportes
                 </a>
             </li>
         </ul>
@@ -93,8 +118,8 @@
         <div class="container-fluid pt-1 py-1 h-100 pb-5" style="overflow: auto;">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Test</li>
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Contribucciones</li>
                 </ol>
             </nav>
             <div class="row">
@@ -105,85 +130,94 @@
                     <div class="table-container">
                         <h1 class="text-center mb-4">Donaciones y Contribuciones</h1>
 
+                        <form>
+                            <div class="mb-4">
+                                <label for="action-type" class="form-label">Selecciona el Tipo de Acción</label>
+                                <select id="action-type" class="form-select" onchange="updateTable()">
+                                    <option value="">Seleccionar...</option>
+                                    <option value="donation">Donación</option>
+                                    <option value="contribution">Contribución</option>
+                                </select>
+                            </div>
 
-                        <div class="mb-4">
-                            <label for="action-type" class="form-label">Selecciona el Tipo de Acción</label>
-                            <select id="action-type" class="form-select" onchange="updateTable()">
-                                <option value="">Seleccionar...</option>
-                                <option value="donation">Donación</option>
-                                <option value="contribution">Contribución</option>
-                            </select>
-                        </div>
+                            <!-- Tabla magica -->
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                <tr id="table-header">
+                                    <th>Campo</th>
+                                    <th>Detalles</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                <!-- Filas para Donaciones -->
+                                <tr class="donation d-none">
+                                    <td>Tipo de Donación</td>
+                                    <td>
+                                        <select class="form-select" id="donation-type"
+                                                onchange="updateDonationFields()">
+                                            <option value="money">Monetaria</option>
+                                            <option value="goods">Viandas</option>
+                                            <option value="prize">Premio</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="donation d-none" id="donation-amount-row">
+                                    <td>Monto de Donación</td>
+                                    <td><input type="text" class="form-control" id="donation-amount"
+                                               placeholder="Monto"></td>
+                                </tr>
+                                <tr class="donation d-none" id="donation-location-row">
+                                    <td>Heladera</td>
+                                    <td><input type="text" class="form-control" id="donation-location"
+                                               placeholder="Heladera"></td>
+                                </tr>
+                                <tr class="donation d-none" id="donation-prize-row">
+                                    <td>Descripción del Premio</td>
+                                    <td><input type="text" class="form-control" id="donation-prize"
+                                               placeholder="Premio"></td>
+                                </tr>
 
-                        <!-- Tabla magica -->
-                        <table class="table table-striped table-bordered">
-                            <thead>
-                            <tr id="table-header">
-                                <th>Campo</th>
-                                <th>Detalles</th>
-                            </tr>
-                            </thead>
-                            <tbody id="table-body">
-                            <!-- Filas para Donaciones -->
-                            <tr class="donation d-none">
-                                <td>Tipo de Donación</td>
-                                <td>
-                                    <select class="form-select" id="donation-type" onchange="updateDonationFields()">
-                                        <option value="money">Monetaria</option>
-                                        <option value="goods">Viandas</option>
-                                        <option value="prize">Premio</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="donation d-none" id="donation-amount-row">
-                                <td>Monto de Donación</td>
-                                <td><input type="text" class="form-control" id="donation-amount" placeholder="Monto"></td>
-                            </tr>
-                            <tr class="donation d-none" id="donation-location-row">
-                                <td>Heladera</td>
-                                <td><input type="text" class="form-control" id="donation-location" placeholder="Heladera"></td>
-                            </tr>
-                            <tr class="donation d-none" id="donation-prize-row">
-                                <td>Descripción del Premio</td>
-                                <td><input type="text" class="form-control" id="donation-prize" placeholder="Premio"></td>
-                            </tr>
-
-                            <!-- Filas para Contribuciones -->
-                            <tr class="contribution d-none">
-                                <td>Tipo de Contribución</td>
-                                <td>
-                                    <select class="form-select" id="contribution-type" onchange="updateContributionFields()">
-                                        <option value="manage">Administrar Heladera</option>
-                                        <option value="distribute">Distribución de Viandas</option>
-                                        <option value="register">Registrar Persona Vulnerable</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="contribution d-none" id="manage-fridge-row">
-                                <td>Heladera a Administrar</td>
-                                <td><input type="text" class="form-control" id="manage-fridge" placeholder="Heladera"></td>
-                            </tr>
-                            <tr class="contribution d-none" id="distribute-fridges-row">
-                                <td>
-                                    <input type="text" class="form-control mb-2" id="distribute-origin"
-                                           placeholder="Heladera Origen">
-                                    <input type="text" class="form-control mb-2" id="distribute-destination"
-                                           placeholder="Heladera Destino">
-                                    <input type="text" class="form-control mb-2" id="distribute-quantity" placeholder="Cantidad">
-                                </td>
-                                <td>
-                                    <select class="form-select" id="distribute-reason">
-                                        <option value="breakdown">Desperfecto</option>
-                                        <option value="fault">Falla de Viandas</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr class="contribution d-none" id="register-person-row">
-                                <td>Número de Tarjeta</td>
-                                <td><input type="text" class="form-control" id="register-card" placeholder="Número de Tarjeta"></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                <!-- Filas para Contribuciones -->
+                                <tr class="contribution d-none">
+                                    <td>Tipo de Contribución</td>
+                                    <td>
+                                        <select class="form-select" id="contribution-type"
+                                                onchange="updateContributionFields()">
+                                            <option value="manage">Administrar Heladera</option>
+                                            <option value="distribute">Distribución de Viandas</option>
+                                            <option value="register">Registrar Persona Vulnerable</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="contribution d-none" id="manage-fridge-row">
+                                    <td>Heladera a Administrar</td>
+                                    <td><input type="text" class="form-control" id="manage-fridge"
+                                               placeholder="Heladera"></td>
+                                </tr>
+                                <tr class="contribution d-none" id="distribute-fridges-row">
+                                    <td>
+                                        <input type="text" class="form-control mb-2" id="distribute-origin"
+                                               placeholder="Heladera Origen">
+                                        <input type="text" class="form-control mb-2" id="distribute-destination"
+                                               placeholder="Heladera Destino">
+                                        <input type="text" class="form-control mb-2" id="distribute-quantity"
+                                               placeholder="Cantidad">
+                                    </td>
+                                    <td>
+                                        <select class="form-select" id="distribute-reason">
+                                            <option value="breakdown">Desperfecto</option>
+                                            <option value="fault">Falla de Viandas</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="contribution d-none" id="register-person-row">
+                                    <td>Número de Tarjeta</td>
+                                    <td><input type="text" class="form-control" id="register-card"
+                                               placeholder="Número de Tarjeta"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
                     </div>
                 </div>
             </div>

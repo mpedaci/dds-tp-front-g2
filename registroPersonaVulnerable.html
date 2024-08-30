@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDS - Grupo 02</title>
+    <!-- Import bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.css" rel="stylesheet"
+          crossorigin="anonymous">
+    <!-- Import popper.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+    <!-- Import javascript cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <!-- Import Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <link rel="stylesheet" href="./styles/badges.css">
+</head>
+
+<body>
+
+<main>
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 210px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none mx-auto">
+            <span class="fs-4">Grupo 02</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="./index.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-house me-2"></i>
+                    Inicio
+                </a>
+            </li>
+            </li>
+            <li class="nav-item">
+                <a href="./premios.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-trophy me-2"></i>
+                    Premios
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./cargarPremio.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-plus me-2"></i>
+                    Cargar Premio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./importarColaboradores.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-file-import me-2"></i>
+                    Importar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./contribucciones.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-hand-holding-medical me-2"></i>
+                    Contribuciones
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./registrarColaborador.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-user-plus me-2"></i>
+                    Registro Colaborador
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./registroPersonaVulnerable.html" class="nav-link active" aria-current="page">
+                    <i class="fa-solid fa-people-robbery me-2"></i>
+                    Registro Persona Vulnerable
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./reportarFallaTecnica.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i>
+                    Reportar Falla Técnica
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./reportes.html" class="nav-link text-white" aria-current="page">
+                    <i class="fa-solid fa-file-lines me-2"></i>
+                    Reportes
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="b-divider"></div>
+
+    <div class="w-100 mx-0" style="background-color: #f4f4f4">
+        <div class="w-100 p-0 m-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center me-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="nav-link badge badge-secondary p-2 mx-1">Puntos: 80.000</span>
+                        <a class="nav-link align-items-center mx-1" href="#"
+                           id="navbarDropdownMenuLink" aria-expanded="false">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
+                                 height="32" alt="Avatar" loading="lazy"/>
+                        </a>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+        <div class="container-fluid pt-1 py-1 h-100 pb-5" style="overflow: auto;">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Registrar Persona Vulnerable</li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-12">
+                                <h1 class="text-center">Registrar Persona Vulnerable</h1>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="email" class="form-control" id="nombre"
+                                       placeholder="Juan" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="apellido" class="form-label">Apellido</label>
+                                <input type="email" class="form-control" id="apellido"
+                                       placeholder="Perez" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="sexo" class="form-label">Sexo</label>
+                                <select class="form-select" aria-label="Default select example"
+                                        id="sexo">
+                                    <option selected disabled>Sexo</option>
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="cantidadDeHijos" class="form-label">Cantidad de hijos</label>
+                                <input type="number" class="form-control" id="cantidadDeHijos"
+                                       placeholder="1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="colaboradorResponsable" class="form-label">Colaborador responsable</label>
+                                <select class="form-select" aria-label="Default select example"
+                                        id="colaboradorResponsable">
+                                    <option selected disabled>Colaborador responsable</option>
+                                    <option value="Juan">Juan</option>
+                                    <option value="Pedro">Pedro</option>
+                                    <option value="Maria">Maria</option>
+                                    <option value="Ana">Ana</option>
+                                    <option value="Jose">Jose</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <h5 class="text-left">Direccion</h5>
+                            </div>
+
+                            <div class="col-9">
+                                <div class="mb-3">
+                                    <label for="calle" class="form-label">Calle</label>
+                                    <input type="email" class="form-control" id="calle"
+                                           placeholder="Avenida Rivadavia">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="mb-3">
+                                    <label for="numero" class="form-label">Numero</label>
+                                    <input type="email" class="form-control" id="numero"
+                                           placeholder="34567">
+                                </div>
+                            </div>
+
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="localidad" class="form-label">Localidad</label>
+                                    <input type="email" class="form-control" id="localidad"
+                                           placeholder="Tres de Febrero">
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label for="piso" class="form-label">Piso</label>
+                                    <input type="email" class="form-control" id="piso"
+                                           placeholder="123A">
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label for="departamento" class="form-label">Departamento</label>
+                                    <input type="email" class="form-control" id="departamento"
+                                           placeholder="15D">
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="mb-3">
+                                    <label for="codigoPostal" class="form-label">Codigo postal</label>
+                                    <input type="email" class="form-control" id="codigoPostal"
+                                           placeholder="1587">
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="tipoDocumento" class="form-label">Tipo documento</label>
+                                    <select class="form-select" aria-label="Default select example"
+                                            id="tipoDocumento">
+                                        <option selected disabled>Tipo documento</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="LE">LE</option>
+                                        <option value="LC">LC</option>
+                                        <option value="CUIT">CUIT</option>
+                                        <option value="CUIL">CUIL</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="numeroDocumento" class="form-label">Numero Documento</label>
+                                    <input type="text" class="form-control" id="numeroDocumento"
+                                           placeholder="12434567" required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3 text-center">
+                                <button type="submit" class="btn btn-primary px-5">Registrar Persona Vulnerable</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+</body>
+
+</html>

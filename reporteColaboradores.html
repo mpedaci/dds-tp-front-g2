@@ -33,7 +33,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="./index.html" class="nav-link active" aria-current="page">
+                <a href="./index.html" class="nav-link text-white" aria-current="page">
                     <i class="fa-solid fa-house me-2"></i>
                     Inicio
                 </a>
@@ -82,7 +82,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./reportes.html" class="nav-link text-white" aria-current="page">
+                <a href="./reportes.html" class="nav-link active" aria-current="page">
                     <i class="fa-solid fa-file-lines me-2"></i>
                     Reportes
                 </a>
@@ -118,14 +118,54 @@
         <div class="container-fluid pt-1 py-1 h-100 pb-5" style="overflow: auto;">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="./reportes.html">Reportes</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cantidad de Viandas por Colaborador</li>
                 </ol>
             </nav>
             <div class="row">
+                <div class="col-12 mb-3">
+                    <h1 class="text-center">Reporte Cantidad de Viandas por Colaborador</h1>
+                </div>
                 <div class="col-12">
-                    <h1 class="text-center">Bienvenido al Sistema para la Mejora del Acceso
-                        Alimentario en Contextos de
-                        Vulnerabilidad Socioeconómica</h1>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Colaborador</th>
+                                <th scope="col">Viandas Donadas</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Juan</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Pedro</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Maria</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Ana</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Jose</td>
+                                <td>25</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
