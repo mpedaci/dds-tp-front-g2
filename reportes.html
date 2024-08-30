@@ -21,6 +21,22 @@
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="./styles/sidebar.css">
     <link rel="stylesheet" href="./styles/badges.css">
+    <style>
+        .reportLink {
+            text-decoration: none;
+            color: black;
+            background-color: lightgray !important;
+            height: 150px;
+            transition: 0.5s;
+        }
+
+        .reportLink:hover {
+            text-decoration: none;
+            color: white;
+            background-color: dimgray !important;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -33,7 +49,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                <a href="./index.html" class="nav-link active" aria-current="page">
+                <a href="./index.html" class="nav-link text-white" aria-current="page">
                     <i class="fa-solid fa-house me-2"></i>
                     Inicio
                 </a>
@@ -82,7 +98,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="./reportes.html" class="nav-link text-white" aria-current="page">
+                <a href="./reportes.html" class="nav-link active" aria-current="page">
                     <i class="fa-solid fa-file-lines me-2"></i>
                     Reportes
                 </a>
@@ -118,14 +134,43 @@
         <div class="container-fluid pt-1 py-1 h-100 pb-5" style="overflow: auto;">
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+                    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Reportes</li>
                 </ol>
             </nav>
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-center">Bienvenido al Sistema para la Mejora del Acceso
-                        Alimentario en Contextos de
-                        Vulnerabilidad Socioeconómica</h1>
+            <div class="column align-content-center" style="height: 80%">
+                <div class="col-12 mb-4">
+                    <h1 class="text-center">Reportes</h1>
+                </div>
+                <div class="col-12 text-center">
+                    <div class="row justify-content-around">
+                        <div class="col-12 col-lg-5 mb-4">
+                            <a href="./reporteHeladeras.html" class="reportLink">
+                                <div class="p-4 rounded align-content-center reportLink">
+                                    <i class="fa-solid fa-triangle-exclamation fa-2x mb-2 m-auto"></i>
+                                    <p class="m-auto">Reporte Cantidad de Fallas por Heladera</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-lg-5 mb-4">
+                            <a href="./reporteViandas.html" class="reportLink">
+                                <div class="p-4 rounded align-content-center reportLink">
+                                    <i class="fa-solid fa-arrows-rotate fa-2x mb-2 m-auto"></i>
+                                    <p class="m-auto">Reporte Cantidad de Viandas Retiradas/Colocadas por Heladera</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row justify-content-around">
+                        <div class="col-12 col-lg-5 mb-4">
+                            <a href="./reporteColaboradores.html" class="reportLink">
+                                <div class="p-4 rounded align-content-center reportLink">
+                                    <i class="fa-solid fa-clipboard-list fa-2x mb-2 m-auto"></i>
+                                    <p class="m-auto">Reporte Cantidad de Viandas por Colaborador</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
